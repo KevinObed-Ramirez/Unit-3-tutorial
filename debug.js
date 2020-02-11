@@ -43,7 +43,7 @@ function test(){
     for(var i =0; i < instructions.length; i++){
         if(instructions[i] === "on"){
             var xS = start[i][0];
-            var yS = start[i][0];
+            var yS = start[i][1];
 
             var xE = end[i][0];
             var yE = end[i][1];
@@ -88,8 +88,8 @@ function test(){
             tempS = Math.min(yS, yE);
             tempL = Math.max (yS, yE);
 
-            yS = tempS
-            yE = tempL
+            yS = tempS ;
+            yE = tempL ;
 
             for(var x = xS; x <= xE ; x++){
                 for(var y = yS; y <= yE ; y++){
@@ -110,14 +110,14 @@ function test(){
             var tempS = 0;
             var tempL = 0;
 
-            tempS = Math.min(xS, xE)
-            tempL = Math.max(xS, xE)
+            tempS = Math.min(xS, xE);
+            tempL = Math.max(xS, xE);
 
             xS = tempS
             xE = tempL
 
             tempS = Math.min(yS, yE);
-            tempL = Math.max(yS, yE)
+            tempL = Math.max(yS, yE);
 
             yS = tempS
             yE = tempL
@@ -137,6 +137,6 @@ function test(){
     }
 
 
-    output.innerHTML += ans;
+    output.innerHTML = ans;
 
 }
